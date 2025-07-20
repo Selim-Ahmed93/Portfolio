@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en"  class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selim Ahmed | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+
+        <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#3b82f6',
+                            dark: '#2563eb'
+                        },
+                        secondary: {
+                            light: '#10b981',
+                            dark: '#059669'
+                        }
+                    },
+                    darkMode: 'class',
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Navigation menu -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-xl font-bold gradient-text">Selim Ahmed</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#tech" class="nav-link">Tech Stack</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative inline-block w-10 mr-2 align-middle select-none">
+                     <div class="relative w-12 h-6">
+  <!-- Hidden checkbox -->
+  <input type="checkbox" id="toggle" class="sr-only peer">
+
+  <!-- Toggle track -->
+  <label for="toggle" class="block h-full w-full rounded-full bg-gray-300 peer-checked:bg-gradient-to-r peer-checked:from-violet-500 peer-checked:to-indigo-500 transition-colors duration-300 cursor-pointer"></label>
+
+  <!-- Toggle thumb -->
+  <div class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md transform transition-all duration-300 peer-checked:translate-x-6 peer-checked:bg-violet-600 peer-hover:bg-violet-500 peer-active:bg-violet-700">
+
+  </div>
+</div>
+
+                    </div>
+                    <span class="text-xs">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </span>
+                    
+                    <button id="mobile-menu-button" class="md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+             <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#tech" class="block px-3 py-2 rounded-md text-base font-medium">Tech Stack</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Hi, I'm <span class="gradient-text">Selim Ahmed</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600 dark:text-gray-300">
+                        Full Stack Developer
+                    </h2>
+                    <p class="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-lg">
+                        "Turning ideas into powerful web solutions with modern technologies.I'm a self-taught Full Stack Developer driven by curiosity and dedication. I create clean, scalable, and user focused web apps using tools like React, Node.js, and MongoDB.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-8 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-lg">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-8 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark opacity-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                    <img src="/images/MY PIC.jpg" 
+                         alt="Developer" 
+                         class="relative z-10 w-80 h-80 object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <h3 class="text-2xl font-semibold mb-6">Who I Am</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I'm a passionate Full Stack Developer with 5+ years of experience building web applications. I specialize in JavaScript technologies across the entire stack (MERN stack) and have a strong eye for modern UI/UX design principles.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        My journey in web development started when I built my first website at 16. Since then, I've worked with startups and established companies to create performant, accessible, and responsive web applications.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        When I'm not coding, you can find me hiking, reading tech blogs, or contributing to open-source projects. I'm always eager to learn new technologies and solve complex problems with elegant solutions.
+                    </p>
+                <a href="./images/Resume/Resume.pdf" 
+   class="inline-flex items-center text-primary-light dark:text-primary-dark font-medium hover:underline"
+   target="_blank" 
+   rel="noopener noreferrer" 
+   download>
+    Download Resume
+    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4">
+        </path>
+    </svg>
+</a>
+
+                </div>
+                
+               <div class="grid grid-cols-2 gap-4 animate-slide-up">
+    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.03] hover:ring-2 hover:ring-primary-light dark:hover:ring-primary-dark transition-all duration-300 ease-in-out">
+        <div class="text-primary-light dark:text-primary-dark text-3xl mb-3">
+            <i class="fas fa-code"></i>
+        </div>
+        <h4 class="font-semibold mb-2">Frontend Development</h4>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
+            Crafting beautiful, responsive interfaces with React, Next.js, and modern CSS frameworks.
+        </p>
+    </div>
+    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.03] hover:ring-2 hover:ring-primary-light dark:hover:ring-primary-dark transition-all duration-300 ease-in-out">
+        <div class="text-primary-light dark:text-primary-dark text-3xl mb-3">
+            <i class="fas fa-server"></i>
+        </div>
+        <h4 class="font-semibold mb-2">Backend Development</h4>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
+            Building robust APIs and server-side logic with Node.js, Express, and MongoDB.
+        </p>
+    </div>
+    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.03] hover:ring-2 hover:ring-primary-light dark:hover:ring-primary-dark transition-all duration-300 ease-in-out">
+        <div class="text-primary-light dark:text-primary-dark text-3xl mb-3">
+            <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h4 class="font-semibold mb-2">Responsive Design</h4>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
+            Creating mobile-first designs that work flawlessly across all devices.
+        </p>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto"></div>
+            </div>
+            
+            <div class="mb-8 flex flex-wrap justify-center gap-4">
+                <button class="filter-btn px-4 py-2 rounded-full bg-primary-light dark:bg-primary-dark text-white" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800" data-filter="react">React</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800" data-filter="next">Next.js</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800" data-filter="node">Node.js</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800" data-filter="fullstack">Full Stack</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="react next fullstack">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="E-commerce Dashboard" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Dashboard</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A comprehensive dashboard for e-commerce businesses with analytics, inventory management, and customer insights.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">React</span>
+                            <span class="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">Next.js</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="react fullstack">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Task Management App" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A collaborative task management application with real-time updates, drag-and-drop functionality, and team features.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">React</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">MongoDB</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="next fullstack">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Travel Blog Platform" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Travel Blog Platform</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A content-rich travel blog with location-based recommendations, user-generated content, and interactive maps.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-black dark:bg-gray-200 text-white dark:text-gray-900 rounded-full">Next.js</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">Tailwind CSS</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="react">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Weather App" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Weather Forecast App</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A beautiful weather application with 7-day forecasts, hourly predictions, and location-based weather data.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">React</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">CSS</span>
+                            <span class="text-xs px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="node">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="API Service" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">RESTful API Service</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A scalable backend API with authentication, rate limiting, and comprehensive documentation for developers.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Node.js</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full">MongoDB</span>
+                            <span class="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full">Express</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800" data-tech="next react">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Portfolio Website" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="text-white bg-primary-light dark:bg-primary-dark px-4 py-2 rounded-lg font-medium">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">
+                            A modern, responsive portfolio website with dark mode, animations, and project showcase.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 bg-black dark:bg-gray-200 text-white dark:text-gray-900 rounded-full">Next.js</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">React</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
+                    View All Projects
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mb-3" alt="HTML5">
+                    <span class="font-medium">HTML5</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12 mb-3" alt="CSS3">
+                    <span class="font-medium">CSS3</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mb-3" alt="JavaScript">
+                    <span class="font-medium">JavaScript</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12 mb-3" alt="React">
+                    <span class="font-medium">React</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="w-12 h-12 mb-3" alt="Next.js">
+                    <span class="font-medium">Next.js</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-12 h-12 mb-3" alt="Node.js">
+                    <span class="font-medium">Node.js</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-12 h-12 mb-3" alt="Express">
+                    <span class="font-medium">Express</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-12 h-12 mb-3" alt="MongoDB">
+                    <span class="font-medium">MongoDB</span>
+                </div>
+                 <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdxy1c2bvl6odeo52dodk.jpg" class="w-12 h-12 mb-3" alt="Tailwind CSS">
+                    <span class="font-medium">Tailwind CSS</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 mb-3" alt="Git">
+                    <span class="font-medium">Git</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 h-12 mb-3" alt="GitHub">
+                    <span class="font-medium">GitHub</span>
+                </div>
+                <div class="tech-tag bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" class="w-12 h-12 mb-3" alt="npm">
+                    <span class="font-medium">Npm</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary-light dark:bg-primary-dark mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Let's Talk About Your Project</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        I'm currently available for freelance work or full-time positions. If you have a project that needs creative solutions, or just want to say hello, feel free to reach out!
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-primary-light dark:text-primary-dark text-xl mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:alex@example.com" class="text-gray-500 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">mdselimahmed6467@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="text-primary-light dark:text-primary-dark text-xl mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <a href="tel:+88 01912646793" class="text-gray-500 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark">+88 01912646793</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="text-primary-light dark:text-primary-dark text-xl mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-500 dark:text-gray-400">Dhaka,Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Selim-Ahmed93" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light dark:hover:bg-primary-dark hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-md">
+
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.www.linkedin.com/in/selim-ahmed93" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-dark hover:text-white transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/Selim__Ahmed__" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-dark hover:text-white transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-pink-500 hover:text-white transition-colors">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                                <input type="text" id="name" class="contact-input w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                                <input type="email" id="email" class="contact-input w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                            <input type="text" id="subject" class="contact-input w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="5" class="contact-input w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-light dark:bg-primary-dark text-white py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold gradient-text">Md Selim Ahmed</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">Home</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">About</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">Projects</a>
+                    <a href="#tech" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">Tech Stack</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p>&copy; 2025 Selim Ahmed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
