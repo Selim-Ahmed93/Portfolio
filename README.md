@@ -10,17 +10,6 @@ A modern, responsive portfolio website built with **HTML**, **Tailwind CSS**, an
 - ⚡ Built with utility-first Tailwind CSS
 - 📁 Clean project structure and reusable components
 
-## 📸 Screenshots
-
-![Desktop Screenshot](C:/Projects/Portfolio/images/screenshot.png)
-### 💻 Desktop View
-
-
-
-### 📱 Mobile View
-
-![Mobile Screenshot](./images/mobile.png)
-
 ## 🛠️ Tech Stack
 
 - HTML5
@@ -44,7 +33,7 @@ portfolio/
 
 ## 📧 Contact
 
-- 📧 Email: your-email@example.com
+- 📧 Email: mdselimahmed6467@gmail.com 
 - 🌐 Website: [selimahmed-dev.netlify.app](https://selimahmed-dev.netlify.app)
 - 💼 LinkedIn: [linkedin.com/in/selimahmed](https://www.linkedin.com/in/selimahmed)
 
