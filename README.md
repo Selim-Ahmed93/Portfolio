@@ -12,9 +12,10 @@ A modern, responsive portfolio website built with **HTML**, **Tailwind CSS**, an
 
 ## 📸 Screenshots
 
+![Desktop Screenshot](C:/Projects/Portfolio/images/screenshot.png)
 ### 💻 Desktop View
 
-![Desktop Screenshot](./images/desktop.png)
+
 
 ### 📱 Mobile View
 
