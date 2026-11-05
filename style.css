@@ -18,7 +18,18 @@
     --shadow: 0 22px 70px rgba(0, 0, 0, 0.25);
 }
 
+:root {
+  --bg: #0b1220;
+  --card: #111c2e;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #26364d;
+  --shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
 
+html {
+  scroll-behavior: smooth;
+}
 /* ==============================
    2. Global Styles
 ================================= */

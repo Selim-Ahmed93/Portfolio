@@ -22,6 +22,15 @@
     />
     <meta property="og:url" content="https://selimahmed-dev.netlify.app" />
 
+    <!-- Website Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/Neon SA Developer Logo.png"
+    />
+
+    <link rel="apple-touch-icon" href="./images/Neon SA Developer Logo.png" />
+
     <title>Md. Selim Ahmed | Full-Stack Developer</title>
 
     <!-- Google Fonts -->
@@ -100,7 +109,7 @@
               <span class="tag">AI-assisted Development</span>
             </div>
 
-            <div class="button-row">
+            <!-- <div class="button-row">
               <a href="#projects" class="btn btn-primary">
                 View Featured Projects ↗
               </a>
@@ -119,6 +128,21 @@
               >
                 Contact Me
               </a>
+            </div> -->
+            <div class="button-row">
+              <a href="#projects" class="btn btn-primary">
+                View Featured Projects ↗
+              </a>
+
+              <a
+                href="./Resume/Resume%20(9).pdf"
+                download="Selim-Ahmed-Resume.pdf"
+                class="btn btn-secondary"
+              >
+                Download Resume ↓
+              </a>
+
+              <a href="#contact" class="btn btn-secondary"> Contact Me ↗ </a>
             </div>
 
             <div class="socials hero-socials">
@@ -363,289 +387,269 @@
       </section>
 
       <!-- Projects Section -->
-<section id="projects">
-  <div class="container">
+      <section id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Selected Work</div>
 
-    <div class="section-heading">
-      <div class="eyebrow">Selected Work</div>
+            <h2>Projects I've Built</h2>
 
-      <h2>Projects I've Built</h2>
+            <p>
+              Practical projects demonstrating my frontend, backend, and
+              full-stack development skills.
+            </p>
+          </div>
 
-      <p>
-        Practical projects demonstrating my frontend, backend,
-        and full-stack development skills.
-      </p>
-    </div>
+          <div class="cards">
+            <!-- StudioSpace -->
+            <article class="project-card reveal">
+              <div class="project-image-wrapper">
+                <img
+                  src="./images/portfolioprojects1.png"
+                  alt="StudioSpace Booking Platform Screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
 
-    <div class="cards">
+              <div class="project-top">
+                <div class="project-icon">🏢</div>
+                <span class="project-type">Full-Stack Application</span>
+              </div>
 
-      <!-- StudioSpace -->
-      <article class="project-card reveal">
+              <h3>StudioSpace</h3>
 
-        <div class="project-image-wrapper">
-          <img
-            src="./images/portfolioprojects1.png"
-            alt="StudioSpace Booking Platform Screenshot"
-            class="project-image"
-            loading="lazy"
-          />
+              <p>
+                A full-stack studio booking platform featuring authentication,
+                studio management, booking operations, API validation, and
+                responsive user interfaces.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Better Auth</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://studiospace-client-g428.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+
+                <a
+                  href="https://github.com/Selim-Ahmed93/studiospace-client"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- Doctor Tracker -->
+            <article class="project-card reveal">
+              <div class="project-image-wrapper">
+                <img
+                  src="./images/portfolioProjects3.png"
+                  alt="Doctor Tracker Dashboard Screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-top">
+                <div class="project-icon">🏥</div>
+                <span class="project-type">Management System</span>
+              </div>
+
+              <h3>Doctor Tracker</h3>
+
+              <p>
+                An admin-focused doctor and patient management system with
+                authentication, CRUD operations, search, filtering, pagination,
+                and dashboard analytics.
+              </p>
+
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://doctor-tracker-frontend-gilt-beta.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+
+                <a
+                  href="https://github.com/Selim-Ahmed93/doctor-tracker-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- Bazar Dor -->
+            <article class="project-card reveal">
+              <div class="project-image-wrapper">
+                <img
+                  src="./images/portfolioprojects4.png"
+                  alt="Bazar Dor E-commerce Screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-top">
+                <div class="project-icon">🛍</div>
+                <span class="project-type">E-commerce</span>
+              </div>
+
+              <h3>Bazar Dor</h3>
+
+              <p>
+                A shopping web application built with Next.js and TypeScript,
+                featuring product browsing, user authentication, and social
+                sign-in.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">MongoDB</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://bazar-door-apps.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+
+                <a
+                  href="https://github.com/Selim-Ahmed93/Bazar-Door-Apps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- Dev Stack -->
+            <article class="project-card reveal">
+              <div class="project-image-wrapper">
+                <img
+                  src="./images/portfolioProjects2.png"
+                  alt="Dev Stack Project Screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-top">
+                <div class="project-icon">⌘</div>
+                <span class="project-type">Web Application</span>
+              </div>
+
+              <h3>Dev Stack</h3>
+
+              <p>
+                A web development project built with modern frontend
+                technologies, focusing on a responsive interface and practical
+                user experience.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">React</span>
+                <span class="tag">JavaScript</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://dev-stack-six-eta.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+
+                <a
+                  href="https://github.com/Selim-Ahmed93/Dev-Stack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- FitLog -->
+            <article class="project-card reveal">
+              <div class="project-image-wrapper">
+                <img
+                  src="./images/portfolioprojects5.png"
+                  alt="FitLog Application Screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-top">
+                <div class="project-icon">💪</div>
+                <span class="project-type">Web Application</span>
+              </div>
+
+              <h3>FitLog</h3>
+
+              <p>
+                A fitness-focused web application project designed to provide
+                users with a convenient digital experience.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://fitlog-app-two.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+
+                <a
+                  href="https://github.com/Selim-Ahmed93/Assignment-6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code ↗
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
-
-        <div class="project-top">
-          <div class="project-icon">🏢</div>
-          <span class="project-type">Full-Stack Application</span>
-        </div>
-
-        <h3>StudioSpace</h3>
-
-        <p>
-          A full-stack studio booking platform featuring
-          authentication, studio management, booking operations,
-          API validation, and responsive user interfaces.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Next.js</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express.js</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">Better Auth</span>
-        </div>
-
-        <div class="project-links">
-          <a
-            href="https://studiospace-client-g428.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo ↗
-          </a>
-
-          <a
-            href="https://github.com/Selim-Ahmed93/studiospace-client"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source Code ↗
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- Doctor Tracker -->
-      <article class="project-card reveal">
-
-        <div class="project-image-wrapper">
-          <img
-            src="./images/portfolioProjects3.png"
-            alt="Doctor Tracker Dashboard Screenshot"
-            class="project-image"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="project-top">
-          <div class="project-icon">🏥</div>
-          <span class="project-type">Management System</span>
-        </div>
-
-        <h3>Doctor Tracker</h3>
-
-        <p>
-          An admin-focused doctor and patient management system
-          with authentication, CRUD operations, search, filtering,
-          pagination, and dashboard analytics.
-        </p>
-
-        <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">MongoDB</span>
-        </div>
-
-        <div class="project-links">
-          <a
-            href="https://doctor-tracker-frontend-gilt-beta.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo ↗
-          </a>
-
-          <a
-            href="https://github.com/Selim-Ahmed93/doctor-tracker-frontend"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source Code ↗
-          </a>
-        </div>
-
-      </article>
-
-
-      
-     <!-- Bazar Dor -->
-<article class="project-card reveal">
-
-  <div class="project-image-wrapper">
-    <img
-      src="./images/portfolioprojects4.png"
-      alt="Bazar Dor E-commerce Screenshot"
-      class="project-image"
-      loading="lazy"
-    />
-  </div>
-
-  <div class="project-top">
-    <div class="project-icon">🛍</div>
-    <span class="project-type">E-commerce</span>
-  </div>
-
-  <h3>Bazar Dor</h3>
-
-  <p>
-    A shopping web application built with Next.js and
-    TypeScript, featuring product browsing, user
-    authentication, and social sign-in.
-  </p>
-
-  <div class="tags">
-    <span class="tag">Next.js</span>
-    <span class="tag">TypeScript</span>
-    <span class="tag">Tailwind CSS</span>
-    <span class="tag">MongoDB</span>
-  </div>
-
-  <div class="project-links">
-
-    <a
-      href="https://bazar-door-apps.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Live Demo ↗
-    </a>
-
-    <a
-      href="https://github.com/Selim-Ahmed93/Bazar-Door-Apps"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Source Code ↗
-    </a>
-
-  </div>
-
-</article>
-
-<!-- Dev Stack -->
-<article class="project-card reveal">
-
-  <div class="project-image-wrapper">
-    <img
-      src="./images/portfolioProjects2.png"
-      alt="Dev Stack Project Screenshot"
-      class="project-image"
-      loading="lazy"
-    />
-  </div>
-
-  <div class="project-top">
-    <div class="project-icon">⌘</div>
-    <span class="project-type">Web Application</span>
-  </div>
-
-  <h3>Dev Stack</h3>
-
-  <p>
-    A web development project built with modern frontend
-    technologies, focusing on a responsive interface
-    and practical user experience.
-  </p>
-
-  <div class="tags">
-    <span class="tag">Next.js</span>
-    <span class="tag">React</span>
-    <span class="tag">JavaScript</span>
-  </div>
-
-  <div class="project-links">
-    <a
-      href="https://dev-stack-six-eta.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Live Demo ↗
-    </a>
-
-    <a
-      href="https://github.com/Selim-Ahmed93/Dev-Stack"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Source Code ↗
-    </a>
-  </div>
-
-</article>
-
-
-
-      <!-- FitLog -->
-      <article class="project-card reveal">
-
-        <div class="project-image-wrapper">
-          <img
-            src="./images/portfolioprojects5.png"
-            alt="FitLog Application Screenshot"
-            class="project-image"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="project-top">
-          <div class="project-icon">💪</div>
-          <span class="project-type">Web Application</span>
-        </div>
-
-        <h3>FitLog</h3>
-
-        <p>
-          A fitness-focused web application project designed
-          to provide users with a convenient digital experience.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Web Development</span>
-          <span class="tag">Responsive UI</span>
-        </div>
-
-        <div class="project-links">
-          <a
-            href="https://fitlog-app-two.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo ↗
-          </a>
-
-          <a
-            href="https://github.com/Selim-Ahmed93/Assignment-6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source Code ↗
-          </a>
-        </div>
-
-      </article>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       <!-- Development Approach -->
       <section id="approach">
@@ -699,172 +703,165 @@
       </section>
 
       <!-- Contact Section -->
-     
-<!-- Contact Section -->
-<section class="contact-section" id="contact">
-  <div class="contact-container">
 
-    <!-- Section Heading -->
-    <div class="contact-heading">
-      <span class="contact-eyebrow">GET IN TOUCH</span>
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <!-- Section Heading -->
+          <div class="contact-heading">
+            <span class="contact-eyebrow">GET IN TOUCH</span>
 
-      <h2>Let's Work Together</h2>
+            <h2>Let's Work Together</h2>
 
-      <p>
-        Have a project in mind or want to discuss an opportunity?
-        I'd love to hear from you. Send me a message!
-      </p>
-    </div>
+            <p>
+              Have a project in mind or want to discuss an opportunity? I'd love
+              to hear from you. Send me a message!
+            </p>
+          </div>
 
-    <div class="contact-content">
+          <div class="contact-content">
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <span class="info-label">CONTACT INFORMATION</span>
 
-      <!-- Contact Information -->
-      <div class="contact-info">
-        <span class="info-label">CONTACT INFORMATION</span>
+              <h3>Let's start a conversation.</h3>
 
-        <h3>Let's start a conversation.</h3>
+              <p class="info-description">
+                Whether you have a question, a project idea, or just want to say
+                hello, feel free to reach out.
+              </p>
 
-        <p class="info-description">
-          Whether you have a question, a project idea, or just want
-          to say hello, feel free to reach out.
-        </p>
+              <div class="contact-details">
+                <a
+                  href="mailto:mdselimahmed6467@gmail.com"
+                  class="contact-item"
+                >
+                  <div class="contact-icon">✉</div>
+                  <div>
+                    <small>Email Me</small>
+                    <span>mdselimahmed6467@gmail.com</span>
+                  </div>
+                </a>
 
-        <div class="contact-details">
+                <a href="tel:+8801912646793" class="contact-item">
+                  <div class="contact-icon">☎</div>
+                  <div>
+                    <small>Call Me</small>
+                    <span>+8801912646793</span>
+                  </div>
+                </a>
 
-          <a href="mailto:mdselimahmed6467@gmail.com" class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div>
-              <small>Email Me</small>
-              <span>mdselimahmed6467@gmail.com</span>
+                <a
+                  href="https://www.linkedin.com/in/selim-ahmed93"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-item"
+                >
+                  <div class="contact-icon">in</div>
+                  <div>
+                    <small>LinkedIn</small>
+                    <span>Connect with me</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="contact-social">
+                <span>FOLLOW ME</span>
+
+                <div class="social-links">
+                  <a
+                    href="https://github.com/Selim-Ahmed93"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    >GH</a
+                  >
+
+                  <a
+                    href="https://www.linkedin.com/in/selim-ahmed93"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    >in</a
+                  >
+                </div>
+              </div>
             </div>
-          </a>
 
-          <a href="tel:+8801912646793" class="contact-item">
-            <div class="contact-icon">☎</div>
-            <div>
-              <small>Call Me</small>
-              <span>+8801912646793</span>
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+              <div class="form-heading">
+                <h3>Send Me a Message</h3>
+                <p>Fill out the form below and I'll get back to you.</p>
+              </div>
+
+              <form id="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your Name <span>*</span></label>
+
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your full name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address <span>*</span></label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject <span>*</span></label>
+
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="What would you like to discuss?"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Your Message <span>*</span></label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="send-message-btn">
+                  <span>Send Message</span>
+                  <span class="send-arrow">→</span>
+                </button>
+
+                <p class="form-note">
+                  <span>🔒</span>
+                  Your information will only be used to respond to your message.
+                </p>
+              </form>
             </div>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/selim-ahmed93"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-item"
-          >
-            <div class="contact-icon">in</div>
-            <div>
-              <small>LinkedIn</small>
-              <span>Connect with me</span>
-            </div>
-          </a>
-
-        </div>
-
-        <div class="contact-social">
-          <span>FOLLOW ME</span>
-
-          <div class="social-links">
-            <a
-              href="https://github.com/Selim-Ahmed93"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >GH</a>
-
-            <a
-              href="https://www.linkedin.com/in/selim-ahmed93"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >in</a>
           </div>
         </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-wrapper">
-
-        <div class="form-heading">
-          <h3>Send Me a Message</h3>
-          <p>Fill out the form below and I'll get back to you.</p>
-        </div>
-
-        <form id="contact-form">
-
-          <div class="form-row">
-
-            <div class="form-group">
-              <label for="name">Your Name <span>*</span></label>
-
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your full name"
-                autocomplete="name"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address <span>*</span></label>
-
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                autocomplete="email"
-                required
-              />
-            </div>
-
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject <span>*</span></label>
-
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              placeholder="What would you like to discuss?"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message <span>*</span></label>
-
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="send-message-btn">
-            <span>Send Message</span>
-            <span class="send-arrow">→</span>
-          </button>
-
-          <p class="form-note">
-            <span>🔒</span>
-            Your information will only be used to respond to your message.
-          </p>
-
-        </form>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
+      </section>
     </main>
 
     <!-- Footer -->
