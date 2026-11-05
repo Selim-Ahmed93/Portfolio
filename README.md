@@ -35,7 +35,7 @@ portfolio/
 
 - 📧 Email: mdselimahmed6467@gmail.com 
 - 🌐 Website:https://portfolio-puce-eight-63.vercel.app/
-- 💼 LinkedIn: [linkedin.com/in/selimahmed](https://www.linkedin.com/in/selimahmed)
+- 💼 LinkedIn:https://linkedin.com/in/selim-ahmed93
 
 ---
 
