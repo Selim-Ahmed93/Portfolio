@@ -18,7 +18,7 @@ A modern, responsive portfolio website built with **HTML**, **Tailwind CSS**, an
 
 ## 🔗 Live Demo
 
-👉 [Visit Portfolio](https://selimahmed-dev.netlify.app)
+https://portfolio-puce-eight-63.vercel.app
 
 ## 📂 Folder Structure
 
