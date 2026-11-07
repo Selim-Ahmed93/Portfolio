@@ -18,7 +18,7 @@ A modern, responsive portfolio website built with **HTML**, **Tailwind CSS**, an
 
 ## 🔗 Live Demo
 
-👉 [Visit Portfolio](https://selimahmed-dev.netlify.app)
+https://portfolio-puce-eight-63.vercel.app
 
 ## 📂 Folder Structure
 
@@ -34,8 +34,8 @@ portfolio/
 ## 📧 Contact
 
 - 📧 Email: mdselimahmed6467@gmail.com 
-- 🌐 Website: [selimahmed-dev.netlify.app](https://selimahmed-dev.netlify.app)
-- 💼 LinkedIn: [linkedin.com/in/selimahmed](https://www.linkedin.com/in/selimahmed)
+- 🌐 Website:https://portfolio-puce-eight-63.vercel.app/
+- 💼 LinkedIn:https://linkedin.com/in/selim-ahmed93
 
 ---
 
