@@ -7,7 +7,9 @@ import transporter from "./config/mail.js";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://portfolio-puce-eight-63.vercel.app"
+}));
 app.use(express.json());
 
 const port = process.env.PORT || 5000;

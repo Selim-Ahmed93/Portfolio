@@ -111,7 +111,7 @@ const form = document.getElementById("contact-form");
 const submitButton = form.querySelector("button[type='submit']");
 const buttonText = submitButton.querySelector(".btn-text");
 
-const API_URL = "http://localhost:5000/api/contact";
+const API_URL = "https://portfolio-t1ah.onrender.com/api/contact";
 
 // Toast Notification Function
 function showToast(message, type = "success") {
