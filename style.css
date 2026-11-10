@@ -1503,3 +1503,51 @@ body.light #about .info-item span:last-child,
 [data-theme="light"] #about .info-item span:last-child {
   color: #0f172a;
 }
+
+/* ===================================
+   Toast Notification
+=================================== */
+
+.toast {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+
+  padding: 15px 22px;
+  border-radius: 8px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateX(30px);
+
+  transition: all 0.3s ease;
+
+  max-width: 350px;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-success {
+  background: #15803d;
+}
+
+.toast-error {
+  background: #dc2626;
+}
+
+.toast-warning {
+  background: #b45309;
+}
+
+.send-message-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

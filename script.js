@@ -102,36 +102,109 @@ revealElements.forEach((element) => {
 });
 
 // Form Validation //
+// ===================================
+// 5. Contact Form Submission
+// ===================================
 
 const form = document.getElementById("contact-form");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const subjectInput = document.getElementById("subject");
-const messageTextarea = document.getElementById("message");
-const submitButton = document.querySelector("button[type='submit']");
 
-form.addEventListener("submit", (e) => {
+const submitButton = form.querySelector("button[type='submit']");
+const buttonText = submitButton.querySelector(".btn-text");
+
+const API_URL = "http://localhost:5000/api/contact";
+
+// Toast Notification Function
+function showToast(message, type = "success") {
+  const toast = document.createElement("div");
+
+  toast.className = `toast toast-${type}`;
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }, 4000);
+}
+
+// Form Submit Event
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = nameInput.value.trim();
-  const email = emailInput.value.trim();
-  const subject = subjectInput.value.trim();
-  const message = messageTextarea.value.trim();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
 
+  // Empty field validation
   if (!name || !email || !subject || !message) {
-    alert("Please fill in all fields.");
+    showToast("Please fill in all fields.", "error");
     return;
   }
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
+    showToast("Please enter a valid email address.", "error");
     return;
   }
-  const allUserData = {
-    name: nameInput.value.trim(),
-    email: emailInput.value.trim(),
-    subject: subjectInput.value.trim(),
-    message: messageTextarea.value.trim(),
-  };
-  console.log(allUserData);
+
+  // Loading state
+  submitButton.disabled = true;
+  buttonText.textContent = "Sending...";
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Something went wrong!");
+    }
+
+    // Reset form after successful submission
+    form.reset();
+
+    if (result.emailSent) {
+      showToast("Message sent successfully!", "success");
+    } else {
+      showToast(
+        "Message received, but email notification failed.",
+        "warning"
+      );
+    }
+
+  } catch (error) {
+    console.error("Contact Form Error:", error);
+
+    showToast(
+      error.message || "Failed to send message. Please try again.",
+      "error"
+    );
+
+  } finally {
+    // Restore button
+    submitButton.disabled = false;
+    buttonText.textContent = "Send Message";
+  }
 });
