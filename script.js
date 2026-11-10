@@ -128,3 +128,27 @@ revealElements.forEach(element => {
     observer.observe(element);
 
 });
+
+// Form Validation //
+
+const form = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject");
+const messageTextarea = document.getElementById("message");
+const submitButton = document.querySelector("button[type='submit']");
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+     
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const subject = subjectInput.value.trim();
+    const message = messageTextarea.value.trim();   
+
+    if (!name || !email || !subject || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+});
