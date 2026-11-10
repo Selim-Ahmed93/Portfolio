@@ -151,4 +151,16 @@ form.addEventListener("submit", (e) => {
         alert("Please fill in all fields.");
         return;
     }
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+    const allUserData ={
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        subject: subjectInput.value.trim(),
+        message: messageTextarea.value.trim()
+    }
+    console.log(allUserData);
 });
